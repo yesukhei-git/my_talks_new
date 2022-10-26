@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>2nd Annual Review</title>
+    <meta name="description" content="2D navigation demo" />
+    <meta name="author" content="Henrik Ingo" />
+    <link href="../../css/impress-common.css" rel="stylesheet" />
+    <link href="css/presentation.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <title>CodePen - Night Sky (Pure CSS fx)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="shooting/style.css">
+  <link rel="stylesheet" href="sky/style.css">
+
+
+</head>
+<body class="impress-not-supported">
+
+  <div class="sky">
+    <div class="mountains">
+      <div class="mountain-1"></div>
+      <div class="mountain-2"></div>
+      <div class="land-1"></div>
+      <div class="land-2"></div>
+      <div class="land-3"></div>
+    </div>
+    <div class="mountains-base"></div>
+    <div class="light-base"></div>
+    <div class="stars"></div>
+    <div class="stars-cross"></div>
+    <div class="stars-cross-aux"></div>
+  </div>
+  <div class="shootingStarContainer">
+          <div class="shootingStar"></div>
+            <div class="shootingStar pink"></div>
+            <div class="shootingStar blue"></div>
+            <div class="shootingStar blue2"></div>
+            <div class="shootingStar yellow"></div>
+            <div class="shootingStar yellow2"></div>
+      </div>
+
+
+
+
+
+  <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script><script  src="sky/script.js"></script>
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<!-- Some images that are fixed to background in the css -->
+<img id="applepie-image" class="bg" src="images/6296334551_b3d5c27823_b.png">
+<img id="icecream-image" class="bg" src="images/35535918670_f1d12627ff_o.png">
+<img id="crisps-image" class="bg" src="images/6636957665_5e7c4a79de_o.png">
+
+
+
+<div id="impress" data-transition-duration="1000"      data-width="1624"
+    data-height="1200"
+    data-max-scale="0.99 "
+    data-min-scale="0.4" data-perspective="1000" >
+
+    <div class="step" data-scale="2" data-x="00" data-y="-100">
+        <h1><br><br><br>
+          <br>
+          PhD Annual Review <br>
+          Department of Physics  <br>
+          Carnegie Mellon University <br><br><br>
+      Yesukhei Jagvaral  <br>
+          06/08/2022<br> </h1>
+
+    </div>
+
+    <div id="contents" class="step  " data-x="-100" data-y="2200" data-scale="1.0">
+      <h1>Table of Contents</h1>
+      <ul>
+          <li><a href="#step-1">Overview/Motivation</a></li>
+          <ul>
+            <li><a href="#step-2">What is Intrinsic Alignment (IA)?</a></li>
+            <li><a href="#step-3">What are mock catalogs?</a></li>
+            <li><a href="#step-4">What are Deep Learning/Generative models?</a></li>
+            <li><a href="#step-5">Simulation-based Inference (very trendy)</a></li>
+          </ul>
+
+          <li><a href="#step-1">Past research:</a></li>
+          <ul>
+          <li><a href="#step-6">Probabilistic model for dynamic galaxy decomposition</a></li>
+          <li><a href="#step-7">Intrinsic Alignment of bulges and discs</a></li>
+          <li><a href="#step-8">Galaxies and Halos on Graph Neural Networks</a></li>
+          </ul>
+
+          <li><a href="#step-1">Current research:</a></li>
+          <ul>
+          <li><a href="#step-9"> Exploring new Deep Generative models</a></li>
+          <li><a href="#step-10"> Exploring resolution "enhancement" of simulations </a></li>
+          </ul>
+
+          <li><a href="#step-1">Future research:</a></li>
+          <ul>
+          <li><a href="#step-10"> Exploring robust SBI techniques </a></li>
+          <li><a href="#step-10"> Exploring new ML techniques </a></li>
+          </ul>
+
+          <li><a href="#moreinfo">Conclusion</a></li>
+      </ul>
+
+    </div>
+
+    <!-- Ice cream slides (3) -->
+    <div id="Ov1" class="step" data-x="2000" data-y="2000"
+         data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
+         data-goto-next-list="contents Ov2 contents decomp1" data-scale="1.0">
+        <h1>Overview/Motivation</h1>
+        <h3>Intrinsic Alignment (IA)</h3>
+
+       Intrinsic Alignment (IA)  is the tendency of galaxies to align with their neighboring galaxies and the  underlying  large  scale  structure.   This  effect  can  masquerade  as  a  weak  gravitational  lensing  signal  and contribute to the systematic errors of upcoming weak lensing surveys.  <br>
+
+
+      <p style="text-align:center;">  <img src="images/inalign.png"
+            alt="Mother Teresa holding a newborn baby"
+            class="center"       style="width:800px;height:auto;"  ></p>
+
+            <p class="left bottom"><small>Image credit: Troxel & Ishak </small></p>
+            <ul>
+            <li><a href="#step-1">Analytic Models in the Literature</a></li>
+            <ul>
+            <li><a href="#step-10"> NLA from Hirata & Seljak, TATT from Blazek et al 2016 </a></li>
+            <li><a href="#step-10"> Small scale Halo models </a></li>
+            </ul></ul>
+
+    </div>
+
+
+    <div id="Ov2" class="step" data-x="2000" data-y="3200"
+         data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
+         data-goto-next-list="Ov1 Ov3 contents decomp2">
+        <h1>Overview/Motivation</h1>
+        <h3>Mock Catalogs</h3>
+
+        <li><a href="#step-1">Mock catalogs used to design/test systematics and in validating analysis pipelines.</a></li>
+
+        <li><a href="#step-10"> Mock catalogs are used in SBI. </a></li>
+
+
+
+      <p style="text-align:center;">  <img src="images/pipiline.png"
+            alt="Mother Teresa holding a newborn baby"
+            class="center"       style="width:1000px;height:auto;"  ></p>
+            <ul>
+            <li><a href="#step-1">Challenges:</a></li>
+            <ul>
+            <li><a href="#step-10"> Too costly </a></li>
+            <li><a href="#step-10"> At large scales and high resolutions -- unreachable </a></li>
+            </ul>  </ul>
+            <li><a href="#step-1">Machine Learning to the rescue?</a></li>
+    </div>
+
+
+
+    <div id="Ov3" class="step" data-x="2000" data-y="4800"
+         data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
+         data-goto-next-list="Ov2  who contents bulge-disc-ia"   data-scale="1" >
+        <h1>Overview/Motivation</h1>
+        <h3>Simulation-based Inference</h3>
+
+        <li><a href="#step-1">An emerging method to do inference without the explicit likelihood</a></li>
+
+      <p style="text-align:center;">  <img src="images/sbi.png"
+            alt="Mother Teresa holding a newborn baby"
+            class="center"       style="width:1000px;height:auto;"  ></p>
+            <ul>
+            <li><a href="#step-1">Challenges:</a></li>
+            <ul>
+            <li><a href="#step-10"> Needs a lot of simulations </a></li>
+            <li><a href="#step-10"> Biased Neural Density Estimators </a></li>
+            <li><a href="#step-1">Quantification of those biases/uncertainties</a></li>
+            </ul>  </ul>
+            <li><a href="#step-1">New ML could help, more on next slides</a></li>
+    </div>
+
+
+    <div id="who" class="step" data-rel-x="0" data-rel-y="1600"
+         data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
+         data-goto-next-list="icecream-con decomp1 icecream applepie">
+        <h1> Wait! Who is this guy? </h1>
+          <font size="+20"> <li>Currently finishing my 4th year in PhD program</li>
+        <li>Doing a 6 year PhD to achieve my career aspiration <br>(given my later start in cosmology)</li>
+
+        <ul>
+        <li><a href="#step-1">Current Academic record in Astro/Cosmo:</a></li>
+        <ul>
+        <li><a href="#step-10"> 2 published papers </a></li>
+        <li><a href="#step-10"> 1 full paper + 1 conference paper under review </a></li>
+        <li><a href="#step-1">   2 new papers (+1 conference) since last annual review</a></li>
+        </ul>  </ul>
+
+        <li>Plan to Graduate in 2024</li>
+        <li>Plan to apply for Post-doc in fall 2023</li>
+
+        </font>
+    </div>
+
+
+    <!-- Crisps slides (3) -->
+    <div id="decomp1" class="step" data-x="4000" data-y="2000"
+         data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
+         data-goto-next-list="Ov3 decomp2 Ov1 gnn1">
+        <h1>1. Probabilistic model for dynamic galaxy decomposition (complete)</h1>
+<h2>Science  goal:  To develop a more robust dynamic model for galaxy decomposition than currently exists in literature, also simpler compared to Machine Learning methods.
+</h2>
+
+<p style="text-align: center;">  <img src="images/disc+bulge.png"
+      alt="disc+bulge"
+      class="center"       style="width:700px;height:auto;"  ></p>
+
+      <ul>
+      <li><a href="#step-1">Interesting Questions:</a></li>
+      <ul>
+      <li><a href="#step-10"> Are Bulges just small Ellipticals, past studies indicate: Likely </a></li>
+      <li><a href="#step-10"> Do Bulges exhibit similar statistical properties as Ellipticals </a></li>
+
+      </ul>  </ul>
+      <li><a href="#step-1">Robust method that can morphologically classify/decompose any given galaxy in the literature lacked</a></li>
+
+    </div>
+
+    <div id="decomp2" class="step" data-x="4000" data-y="3500"
+         data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
+         data-goto-next-list="decomp1 bulge-disc-ia Ov2 graph-anime">
+        <h1>1. Probabilistic model for dynamic galaxy decomposition (complete)</h1>
+<h2>Science  goal:  To develop a more robust dynamic model for galaxy decomposition than currently exists in literature, also simpler compared to Machine Learning methods.
+</h2>
+
+            <style>
+            .container{display: flex;}
+            .col{flex: 2;}
+            </style>
+            <div class="container">
+            <div class="col">
+              <p style="text-align: center;">  <img src="images/cos_alpha.png"
+                    alt="cos_alpha"
+                    class="center"       style="width:500px;height:auto;"  ></p>
+                    <ul>
+                        <li>We developed a 2 parameter probabilistic model for bulge disc decomposition</li>
+                        <li>Performs better  compared to the “circularity” parameter widely used in literature</li>
+                        <li>Results obtained with the model agree reasonably well with observations</li>
+                    </ul>
+            </div>
+            <div class="col">
+              <p style="text-align: center;">  <img src="images/sersic.png"
+                    alt="cos_alpha"
+                    class="center"       style="width:400px;height:auto;"  ></p>
+            </div></div>
+    </div>
+
+
+
+
+    <div id="bulge-disc-ia" class="step" data-x="4000" data-y="4800"
+         data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
+         data-goto-next-list="decomp2 gnn1 Ov3 gnn2">
+        <h1> Intrinsic Alignment of Bulges and Discs (complete)</h1>
+<h2>Science  goal: How do dynamically decomposed/classified galaxies exhibit IA
+</h2>
+
+<ul>
+    <li>Measure IA signal using the analytic NLA model on large scales (> 4 Mpc)</li>
+
+</ul>
+
+<p style="text-align: center;">  <img src="images/ia_fdisk_hd.png"
+      alt="cos_alpha"
+      class="center"       style="width:1200px;height:auto;"  ></p>
+
+      <ul>
+          <li>We see a clear decreasing IA signal with increasing disky-ness</li>
+          <li>Bulges do show statistically consistent signal with the Ellipticals</li>
+          <li>Morphologically classified/decomposed samples reveal a much more complex <br>picture compared to the traditional color split samples</li>
+      </ul>
+
+
+    </div>
+
+
+    <div id="gnn1" class="step" data-x="6000" data-y="2000"
+         data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
+         data-goto-next-list="bulge-disc-ia graph-anime decomp1 ddm1">
+        <h1> Galaxies on Graph Neural Networks (complete)</h1>
+  <h2>Science  goal: Generative Modeling of Galaxy Orientations with Graph Neural Networks
+  </h2>
+
+  <ul>
+    <li>What type of Neural Network do we need?</li>
+
+  </ul>
+
+  <p style="text-align: center;">  <img src="images/gnn.png"
+      alt="cos_alpha"
+      class="center"       style="width:900px;height:auto;"  ></p>
+
+      <ul>
+          <li>Graphs are appropriate for sparsely distributed objects</li>
+          <li>CNNs are appropriate for grid-like data</li>
+          <li>RNN are appropriate for time-series data</li>
+      </ul>
+
+
+    </div>
+
+
+
+
+
+
+
+    <!-- Apple pie slides (3) -->
+    <div id="graph-anime" class="step" data-x="6000" data-y="3500" data-file="graph.html"
+         data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
+         data-goto-next-list="gnn1 gnn2 decomp2 ddm2">
+
+        <h1>The Cosmic Web as a Set of Graphs</h1>
+        <p style="text-align: center;">  <img src="images/graph.gif"
+              alt="cos_alpha"
+              class="center"       style="width:1400px;height:auto;"  ></p>
+
+    </div>
+
+
+    <div id="gnn2" class="step" data-x="6000" data-y="4800"
+         data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
+         data-goto-next-list="graph-anime gnn3 bulge-disc-ia ddm2">
+        <h1> Galaxies on Graph Neural Networks (complete)</h1>
+  <h2>Science  goal: Generative Modeling of Galaxy Orientations with Graph Neural Networks
+  </h2>
+
+  <ul>
+    <li>The Architecture of the Neural Network</li>
+
+  </ul>
+
+  <p style="text-align: center;">  <img src="images/GraphGAN.png"
+      alt="cos_alpha"
+      class="center"       style="width:900px;height:auto;"  ></p>
+
+      <ul>
+          <li>Inputs are galaxy catalogs with various features</li>
+          <li>Each galaxy is placed on the graph node</li>
+          <li>Graphs are connected within each Halo</li>
+          <li>  Then the Graphs are fed into the GAN</li>
+      </ul>
+
+
+    </div>
+
+    <div id="gnn3" class="step" data-x="6000" data-y="6200"
+         data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
+         data-goto-next-list="gnn2 gnn4 bulge-disc-ia ddm2">
+        <h1> Galaxies on Graph Neural Networks (complete)</h1>
+  <h2>Science  goal: Generative Modeling of Galaxy Orientations with Graph Neural Networks
+  </h2>
+
+  <ul>
+    <li>The Architecture of the Neural Network, more technical aspect</li>
+
+  </ul>
+
+  <p style="text-align: center;">  <img src="images/diag_2d_c copy.png"
+      alt="cos_alpha"
+      class="center"       style="width:900px;height:auto;"  ></p>
+
+      <ul>
+          <li>Red dashed box: within halo</li>
+          <li>Purple dashed box: outside halo</li>
+          <li>Desired correlated 2D ellipticity <br>(modeled as a vector without the 180 degree symmetry)</li>
+
+      </ul>
+    </div>
+
+
+    <div id="gnn4" class="step" data-x="6000" data-y="7500"
+         data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
+         data-goto-next-list="gnn3 ddm1 bulge-disc-ia ddm2">
+        <h1> Galaxies on Graph Neural Networks (complete)</h1>
+  <h2>Science  goal: Generative Modeling of Galaxy Orientations with Graph Neural Networks
+  </h2>
+
+  <ul>
+    <li>Results:</li>
+
+  </ul>
+
+  <p style="text-align: center;">  <img src="images/wgp_panels (1).png"
+      alt="cos_alpha"
+      class="center"       style="width:900px;height:auto;"  ></p>
+
+      <ul>
+          <li>Good quantitative agreement</li>
+          <li>Good qualitative trends with mass and morphological type</li>
+
+      </ul>
+
+
+    </div>
+
+
+    <div id="ddm1" class="step" data-x="8000" data-y="2000"
+         data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
+         data-goto-next-list="gnn4 ddm2 gnn1 future">
+        <h1> Denoising Diffusion Models for SO(3) (current)</h1>
+  <h2>Science  goal: Build a Generative Model based on DDM
+  </h2>
+
+  <ul>
+    <li>DDMs are better than GANs (Dhariwal & Nichol) </li>
+  </ul>
+
+  <p style="text-align: center;">  <img src="images/ddm.png"
+      alt="cos_alpha"
+      class="center"       style="width:900px;height:auto;"  ></p>
+
+      <p style="text-align: center;">  <img src="images/ddm_cat.png"
+          alt="cos_alpha"
+          class="center"       style="width:900px;height:auto;"  ></p>
+
+
+      <ul>
+          <li>Credit: Ho et al 2020 </li>
+
+      </ul>
+    </div>
+
+
+    <div id="ddm2" class="step" data-x="8000" data-y="3500"
+         data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
+         data-goto-next-list="gnn4 summary gnn2 summary">
+        <h1> Denoising Diffusion models for SO(3) (current)</h1>
+  <h2>Science  goal: Build a Generative Model based on DDM
+  </h2>
+
+  <ul>
+    <li>DDMs are better than GANs (Dhariwal & Nichol)  </li>
+  </ul>
+
+
+            <p style="text-align: center;">  <img src="images/ddm_vec.png"
+                alt="cos_alpha"
+                class="center"       style="width:900px;height:auto;"  ></p>
+
+
+      <ul><li>Credit: Gilitschenski et al 2019 </li>
+      </ul>
+
+      <ul><li> Writing (almost) everything from scratch, since DDMs have not been implemented on SO(3)</li>
+        <li>So far, I have a broken code that does not work </li>
+        <li>Can diffuse properly using the Lie algebra </li>
+        <li>Cannot denoise properly  </li>
+      </ul>
+
+
+    </div>
+
+    <div id="summary" class="step" data-x="10000" data-y="2000"
+         data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
+         data-goto-next-list="icecream-con crisps-pro icecream applepie">
+         <h1>Summary of my PhD academic record</h1>
+
+         <ul>
+           <li>So far 3 complete projects: either published or submitted for publication</li>
+
+           <!-- <div style="z-index: 2; border: 6px solid red; width: 1500px;
+           height: 300px; border-radius: 200px;
+           position: absolute; top: 350px; left: 150px;"
+                     class="substep"></div> -->
+
+           <li>Currently working on DDM for SO(3)</li>
+           <li>A side project with Prof. Shafer</li>
+           <li>Few side projects with undergraduates</li>
+           <li>Few future ideas on applying novel ML methods to SBI, Mock catalog/image generation</li>
+             <ul>
+    </div>
+
+    <div id="side" class="step " data-rel-x="0" data-rel-y="600"  data-rotate-x="-20" data-rotate-y=" 0"
+         data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
+         data-goto-next-list="icecream-con crisps-pro icecream applepie">
+        <h1> Side projects </h1>
+        <li>Fundamental plane of Galaxies, with Prof. Chad Shafer</li>
+        <li>Intrinsic Alignment of various particle types, with UG Student</li>
+        <li>Improved Intrinsic Alignment estimators, with UG Student</li>
+        <li>Galaxy-Halo connection with ML, with UG 2 Students</li>
+
+    </div>
+
+
+
+
+    <div id="future" class="step" data-rel-x="0" data-rel-y="400"
+     data-rotate-x="-30" data-rotate-y=" 0"
+     data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
+     data-goto-next-list="icecream-con end1 icecream applepie">
+      <h1> Future Outlook </h1>
+              <li>Robust Simulation Based Inference: SBI can be used for precise cosmological inference
+           that will unlock the information in weak lensing surveys</li>
+        <ul>
+          <li>Neural Density Estimators</li>
+
+            <ul>
+                <li>Domain Adaptation techniques   </li>
+                <li>Contrastive learning</li>
+                <li>  Iterative training methods <br> </li>
+            </ul>
+            <br>
+            <li>Improving Image Generation/Simulation  with Barnabas Poczos</li>
+       </ul>
+       <br>
+       <div   id="end1" class="substep">
+      <p    class="fly-in fly-out"  >
+       <font size="+20">  What do the committee members think about these
+           future research directions?  </font>  </p></div>
+<br>
+<div   id="end2" class="substep">
+           <p  class="fly-in fly-out"  >
+            <font size="+20">  Any advice to achieve my goals?  </font>  </p></div>
+
+    </div>
+
+
+
+
+
+    <div id="overview" class="step" data-x="5000" data-y="4000" data-scale="4" style="pointer-events: none;">
+
+    </div>
+</div>
+
+<div id="impress-toolbar"></div>
+
+<div class="impress-progressbar"><div></div></div>
+<div class="impress-progress"></div>
+
+<div id="impress-help"></div>
+
+<script type="text/javascript" src="../../js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+body {
+  background:#363C49;
+}
+.shootingStar {
+  display:block;
+  width:4px;
+  height:4px;
+  border-radius:50%;
+  background:#FFF;
+  top:100px;
+  left:400px;
+  position:relative;
+  transform-origin:100% 0;
+  animation:star-ani 20s    infinite     linear;
+
+  animation-direction: normal;
+  opacity:0;
+}
+.shootingStar:after {
+  content:'';
+  position:absolute;
+  top:0px;
+  left:4px;
+  border:2px solid #F00;
+  border-width:2px 150px 2px 150px;
+  border-color:transparent transparent transparent #FFF;
+  transform:rotate(-45deg) translate3d(1px, -1px, 0);
+  transform-origin:0% 100%;
+  animation:shooting-ani 1s infinite  linear;
+  animation-direction: normal;
+
+}
+
+.pink {
+  top:150px;
+  left:500px;
+  background:#ff5a99;
+  animation-delay:8.8s;
+}
+.pink:after {
+  border-color:transparent transparent transparent #ff5a99 ;
+  animation-delay:8.8s;
+
+}
+
+.blue {
+  top:500px;
+  left:900px;
+  background:#4dabff ;
+  animation-delay:2.5s;
+}
+.blue:after {
+  border-color:transparent transparent transparent #4dabff;
+  animation-delay:2.5s;
+}
+
+.blue2 {
+  top:200px;
+  left:1900px;
+  background:#4dabff ;
+  animation-delay:9.5s;
+}
+.blue2:after {
+  border-color:transparent transparent transparent #4dabff;
+  animation-delay:9.5s;
+}
+
+
+.yellow {
+  top:50px;
+  left:1200px;
+  background:#ffcd5c;
+  animation-delay:5.8s;
+}
+.yellow:after {
+  border-color:transparent transparent transparent #ffcd5c;
+  animation-delay:5.8s;
+}
+
+.yellow2 {
+  top:500px;
+  left:2000px;
+  background:#ffcd5c;
+  animation-delay:12.8s;
+}
+.yellow2:after {
+  border-color:transparent transparent transparent #ffcd5c;
+  animation-delay:12.8s;
+}
+
+@-webkit-keyframes shooting-ani {
+  10% {
+
+  }
+  99.98% {
+    transform:scale(1) rotate(-45deg) translate(0px, 0px);
+  }
+  99.99% {
+    transform:scale(0.5) rotate(-45deg) translate(0px, -1px);
+  }
+}
+
+@-webkit-keyframes star-ani {
+  0% {
+    opacity:0;
+    transform:scale(0) rotate(0) translate3d(0, 0, 0);
+  }
+  8% {
+    opacity:1;
+    transform:scale(1) rotate(0) translate3d(-300px, 300px, 0);
+  }
+  14% {
+    opacity:0;
+    transform:scale(1) rotate(0) translate3d(-500px, 500px, 0);
+  }
+}
