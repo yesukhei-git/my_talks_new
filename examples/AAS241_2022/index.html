@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Montreal2022-Yesukhei</title>
+    <meta name="description" content="2D navigation demo" />
+    <meta name="author" content="Henrik Ingo" />
+    <link href="../../css/impress-common.css" rel="stylesheet" />
+    <link href="css/presentation.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <title>CodePen - Night Sky (Pure CSS fx)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="shooting/style.css">
+  <link rel="stylesheet" href="sky/style.css">
+
+
+</head>
+<body class="impress-not-supported">
+
+  <div class="sky">
+    <!-- <div class="mountains">
+      <div class="mountain-1"></div>
+      <div class="mountain-2"></div> -->
+      <div class="land-1"></div>
+      <div class="land-2"></div>
+      <div class="land-3"></div>
+    </div>
+    <!-- <div class="mountains-base"></div> -->
+    <div class="light-base"></div>
+    <div class="stars"></div>
+    <div class="stars-cross"></div>
+    <div class="stars-cross-aux"></div>
+  </div>
+  <div class="shootingStarContainer">
+          <div class="shootingStar"></div>
+            <div class="shootingStar pink"></div>
+            <div class="shootingStar blue"></div>
+            <div class="shootingStar blue2"></div>
+            <div class="shootingStar yellow"></div>
+            <div class="shootingStar yellow2"></div>
+      </div>
+
+
+
+  <script src="../../src/plugins/reveald3.js"></script>
+
+  <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script><script  src="sky/script.js"></script>
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<!-- Some images that are fixed to background in the css -->
+<!-- <img id="applepie-image" class="bg" src="images/6296334551_b3d5c27823_b.png">
+<img id="icecream-image" class="bg" src="images/35535918670_f1d12627ff_o.png">
+<img id="crisps-image" class="bg" src="images/6636957665_5e7c4a79de_o.png"> -->
+
+
+
+<div id="impress" data-transition-duration="1000"      data-width="1624"
+    data-height="1200"
+    data-max-scale="0.99 "
+    data-min-scale="0.4" data-perspective="1000" >
+
+    <div class="step" data-scale="2" data-x="00" data-y="-100">
+      <h1>Galaxies on Graph Neural Networks</h1>
+      <!-- <h3>towards robust synthetic galaxy catalogs with deep generative models</h3> -->
+          <h1><font size="+5">Presenter: Yesukhei Jagvaral   </font>  </h1>
+      <p style="text-align: center;">  <img src="images/cmu-wordmark-horizontal-r.png"
+          alt="cos_alpha"
+          class="center"       style="width:800px;height:auto;"  ></p>
+
+   <p style="text-align: center;">  <img src="images/GraphGAN.png"
+       alt="cos_alpha"
+       class="center"       style="width:1100px;height:auto;"  ></p>
+
+
+<ul>
+  <li>Inputs: galaxy catalogs from a cosmological simulation</li>
+  <li>Outputs: galaxy catalogs given the tidal field</li>
+  <li> <i> First generative model for correlated properties over populations of galaxies</i></li>
+</ul>
+
+
+
+
+
+
+    </div>
+
+    <!-- <div id="contents" class="step  " data-x="-100" data-y="2200" data-scale="1.0">
+      <h1>Table of Contents</h1>
+      <ul>
+          <li><a href="#step-1">Introduction</a></li>
+          <ul>
+            <li><a href="#step-2">What is Weak Lensing?</a></li>
+            <li><a href="#step-2">What is Intrinsic Alignment (IA)?</a></li>
+            <li><a href="#step-3">What are Mock Catalogs?</a></li>
+            <li><a href="#step-4">What are Deep Learning/Generative models?</a></li>
+
+          </ul>
+
+          <li><a href="#step-1">Graph Neural Networks</a></li>
+          <ul>
+          <li><a href="#step-6">Why are Graphs Neural Networks</a></li>
+          <li><a href="#step-7">Overall Architecture</a></li>
+          <li><a href="#step-8">How do Galaxies look on Graphs</a></li>
+          <li><a href="#step-8">Results</a></li>
+          </ul>
+          <li><a href="#moreinfo">Conclusion</a></li>
+      </ul>
+    </div> -->
+<!--
+    <div id="contents" class="step" data-x="-100" data-y="2200" data-scale="1.0">
+        <h1>Introduction</h1>
+        <h3>Modeling Galaxy Orientations using Graph Neural Networks</h3>
+
+
+
+     <p style="text-align: center;">  <img src="images/GraphGAN.png"
+         alt="cos_alpha"
+         class="center"       style="width:1100px;height:auto;"  ></p>
+
+
+<ul>
+    <li>Inputs are galaxy catalogs from a cosmological simulation</li>
+    <li>Groups of Galaxies are modeled as sets of <i>Graphs</i></li>
+    <li>Deep Generative Model for Galaxy Orientations based on GANs</li>
+   <li>Also works on other features, not just orientation/alignment</li>
+   <li> First generative model for correlated properties over populations of galaxies</li>
+</ul>
+
+    </div>
+
+ -->
+
+
+
+    <div id="intro2" class="step" data-rel-x="00" data-rel-y="2200" data-scale="1.0">
+        <h1>Introduction</h1>
+
+
+
+                <h3>Weak Lensing</h3>
+
+
+                  <p style="text-align: center;">  <img src="images/lensing1.png"
+                        alt="cos_alpha"
+                        class="center"       style="width:1100px;height:auto;"  ></p>
+
+              <ul>
+                  <li> We can infer the matter content and the energy content of the Universe</li>
+                  <li> We measure the coherent shape distortions of m(b)illions of galaxies</li>
+                  <li> One important nuance: galaxies are not randomly oriented on the sky </li>
+              </ul>
+
+           <div   id="end1" class="substep">
+
+
+
+          </div>
+</div>
+
+
+
+
+
+
+<div id="Ov0" class="step" data-x="2000" data-y="700"
+         data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
+         data-goto-next-list="contents Ov1 contents gnn1" data-scale="1.0">
+        <h1>Overview/Motivation</h1>
+
+        <h3>Why Galaxy Alignments are Important</h3>
+
+                    <style>
+                    .container{display: flex;}
+                    .col{flex: 2;}
+                    </style>
+                    <div class="container">
+              <div class="col">
+                      <p style="text-align: center;">  <img src="images/dark_energy.png"
+                            alt="cos_alpha"
+                            class="center"       style="width:500px;height:auto;"  ></p>
+                    </div>
+              <div class="col">
+        <p style="text-align: center;">  <img src="images/w0wa.png"
+           alt="cos_alpha"
+           class="left"       style="width:430px;height:auto;"  ></p>
+           <p class="left bottom"><small>Image credit: Kirk et al, 2015 </small></p>
+                    </div></div>
+
+
+
+
+        <ul>
+        <li>Assuming no intrinsic alignment will bias the measurement of cosmological parameters</li>
+        <li>Also different models have different impacts </li>
+        <li>For Precision Cosmology, this effect needs to be properly accounted for </li>
+        <li><a href="#step-1">Analytic/parametric models in the Literature</a></li>
+        <ul>
+        <li><a href="#step-10"> Need for non-paramteric models -> Deep Learning </a></li>
+        </ul>
+        </ul>
+
+    </div>
+
+
+
+
+
+    <div id="Ov1" class="step" data-rel-x="000" data-rel-y="1500"
+         data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
+         data-goto-next-list="Ov0 Ov2 contents gnn1" data-scale="1.0">
+        <h1>Overview/Motivation</h1>
+        <h3>Intrinsic Alignment (IA)</h3>
+
+        <ul>
+            <li>Intrinsic Alignment (IA)  is the tendency of galaxies to align with their neighboring galaxies and the  underlying  large  scale  structure.</li>
+            <li>This  effect  can  masquerade  as  a  weak  gravitational  lensing  signal</li>
+            <li> Contributes to the systematic errors of weak lensing surveys.  </li>
+        </ul>
+
+
+       <br>
+       <br>  <br>
+
+
+      <p style="text-align:center;">  <img src="images/inalign.png"
+            alt="Mother Teresa holding a newborn baby"
+            class="center"       style="width:800px;height:auto;"  ></p>
+
+            <p class="left bottom"><small>Image credit: Troxel & Ishak </small></p>
+            <ul>
+            <li><a href="#step-1">Analytic Models in the Literature</a></li>
+            <ul>
+            <li><a href="#step-10"> NLA from Hirata & Seljak, TATT from Blazek et al 2016 </a></li>
+            <li><a href="#step-10"> Small scale Halo models </a></li>
+            </ul></ul>
+
+    </div>
+
+
+    <!-- <div id="Ov2" class="step" data-x="2000" data-y="3200"
+         data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
+         data-goto-next-list="Ov1 Ov3 contents gnn2">
+        <h1>Overview/Motivation</h1>
+        <h3>Mock Catalogs</h3>
+
+        <li><a href="#step-1">Mock catalogs used to design/test systematics and in validating analysis pipelines.</a></li>
+
+        <li><a href="#step-10"> Mock catalogs are used in SBI. </a></li>
+
+
+
+      <p style="text-align:center;">  <img src="images/validate.png"
+            alt="Mother Teresa holding a newborn baby"
+            class="center"       style="width:1000px;height:auto;"  ></p>
+            <ul>
+            <li><a href="#step-1">Challenges:</a></li>
+            <ul>
+            <li><a href="#step-10"> Too costly </a></li>
+            <li><a href="#step-10"> At large scales and high resolutions -- unreachable </a></li>
+            </ul>  </ul>
+            <li><a href="#step-1">Machine Learning to the rescue?</a></li>
+    </div> --> -->
+
+
+
+    <div id="Ov3" class="step" data-rel-x="1800" data-rel-y="-1600"
+         data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
+         data-goto-next-list="Ov2  gnn1 contents gnn-anime"   data-scale="1" >
+        <h1>Overview/Motivation</h1>
+        <h3>Generating Mock Catalogs with Deep Learning</h3>
+        <li><a href="#step-1">Mock catalogs used to design/test systematics and in validating analysis pipelines.</a></li>
+
+        <li><a href="#step-10"> Mock catalogs are used in Simulation-based Inference. </a></li>
+
+        <!-- <li><a href="#step-1">An emerging method to do inference without the explicit likelihood</a></li> -->
+
+      <p style="text-align:center;">  <img src="images/learn_galaxy.png"
+            alt="Mother Teresa holding a newborn baby"
+            class="center"       style="width:1000px;height:auto;"  ></p>
+            <ul>
+            <li><a href="#step-1">Challenges:</a></li>
+            <ul>
+            <li><a href="#step-10"> Galaxies are very expensive to simulate </a></li>
+            <li><a href="#step-10"> Large volumes with Galaxies are unreachable (Resolution vs Volume) </a></li>
+             </ul>  </ul>
+            <li><a href="#step-1">We propose a Deep Generative model for making synthetic Galaxy Catalogs</a></li>
+    </div>
+
+
+
+
+<!--
+    <div id="gnn1" class="step" data-rel-x="2000" data-y="2000"
+         data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
+         data-goto-next-list="Ov0 graph-anime Ov1 summary">
+        <h1> Galaxies on Graph Neural Networks </h1>
+  <h2>Science  goal: Generative Modeling of Galaxy Orientations with Graph Neural Networks
+  </h2>
+
+  <ul>
+    <li>What type of Neural Network do we need?</li>
+
+  </ul>
+
+  <p style="text-align: center;">  <img src="images/gnn.png"
+      alt="cos_alpha"
+      class="center"       style="width:900px;height:auto;"  ></p>
+
+      <ul>          <li>CNNs are appropriate for grid-like data</li>
+                <li>RNN are appropriate for time-series data</li>
+          <li>Graphs are appropriate for sparsely distributed objects</li>
+          <li>Also, Graphs are appropriate for capturing correlations among objects</li>
+
+      </ul>
+      <div   id="end1" class="substep">
+     <p    class="fly-in fly-out"  >
+      <font size="+20">  We tested our idea using the <br> IllustrisTNG cosmological simulation </font>  </p></div>
+
+    </div> -->
+
+
+
+
+
+
+
+        <!-- Apple pie slides (3) -->
+        <div id="graph-anime" class="step" data-file="graph.html" data-rel-x="0" data-rel-y="1500"
+             data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
+             data-goto-next-list="gnn1 gnn2 Ov3 future">
+
+            <h1>The Cosmic Web as a Set of Graphs  </h1>
+            <p style="text-align: center;">  <img src="images/graph.gif"
+                  alt="cos_alpha"
+                  class="center"       style="width:1400px;height:auto;"  ></p>
+
+                  <div   id="end1" class="substep">
+                 <p    class="fly-in fly-out"  >
+                  <font size="+20">IllustrisTNG100 modeled as a set of Graphs </font>  </p></div>
+
+        </div>
+
+
+
+        <!-- <div id="gnn2" class="step"  data-rel-x="0" data-rel-y="1200"
+             data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
+             data-goto-next-list=" gnn1 graph-anime Ov2 future">
+            <h1> Galaxies on Graph Neural Networks  </h1>
+      <h2>The Graph Convolution of the Neural Network
+      </h2>
+      <br><br>
+
+
+
+                              <ul>  	$$  \quad y_i = b + \underbrace{\color{orange}{\mathbf{W}_0} h_{i}}_{\tiny \mbox{self-connection}} +
+                                \underbrace{\sum\limits_{m = 1}^M \sum\limits_{j \in \mathcal{N}_i} \overbrace{\textcolor{teal}{q_{m}(\mathbf{x}_i, \mathbf{x}_j)} }^{\tiny \mbox{directional-distance}}
+                                \ w_{i,j} \ \mathbf{W}_m h_j}_{\tiny \mbox{average over neighbors}}$$
+
+                                <script>
+                                MathJax = {
+                                  tex: {
+                                    inlineMath: [['$', '$'], ['\\(', '\\)']]
+                                  },
+                                  svg: {
+                                    fontCache: 'global'
+                                  }
+                                };
+                                </script>
+                                <script type="text/javascript" id="MathJax-script" async
+                                  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+                                </script>
+
+                              </ul>
+<br>
+
+                        <p style="text-align: center;">  <img src="images/graph-zoom.png"
+                              alt="cos_alpha"
+                              class="center"       style="width:600px;height:auto;"  ></p>
+
+
+
+
+        </div> -->
+
+
+
+
+    <!-- <div id="gnn3" class="step" data-rel-x="1800" data-rel-y="2000"
+         data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
+         data-goto-next-list="graph-anime gnn4 Ov3 future">
+        <h1> Galaxies on Graph Neural Networks </h1>
+  <h2>Science  goal: Generative Modeling of Galaxy Orientations with Graph Neural Networks
+  </h2>
+
+  <ul>
+    <li>The Architecture of the Neural Network for 2D vector correlations</li>
+
+  </ul>
+
+  <p style="text-align: center;">  <img src="images/diag_2d_c copy.png"
+      alt="cos_alpha"
+      class="center"       style="width:1200px;height:auto;"  ></p>
+
+      <ul>
+          <li>Red dashed box: within halo</li>
+          <li>Purple dashed box: outside halo</li>
+          <li>Desired correlated 2D ellipticity <br>(modeled as a vector without the 180 degree symmetry)</li>
+
+      </ul>
+    </div> -->
+
+
+    <div id="gnn4" class="step" data-rel-x="0" data-rel-y="1200"
+         data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
+         data-goto-next-list="gnn3 summary Ov3 future">
+        <h1> Galaxies on Graph Neural Networks </h1>
+  <h2>Science  goal: Generative Modeling of Galaxy Orientations with Graph Neural Networks
+  </h2>
+  <ul>
+    <li>Results for the 2D position-shape correlations: </li>
+  </ul>
+  <p style="text-align: center;">  <img src="images/wgp_panels (1).png"
+      alt="cos_alpha"
+      class="center"       style="width:1300px;height:auto;"  ></p>
+      <ul>
+          <li>Good quantitative agreement</li>
+          <li>Good qualitative trends with mass and morphological type</li>
+      </ul>
+    </div>
+
+
+
+
+
+<!--
+    <div id="generative" class="step" data-rel-x="1800" data-rel-y="-2500"
+         data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
+         data-goto-next-list="gnn4 summary Ov3 future">
+        <h1> Overview of Deep Generative Models </h1>
+  <p style="text-align: center;">  <img src="images/gen_models.png"
+      alt="cos_alpha"
+      class="center"       style="width:900px;height:auto;"  ></p>
+
+      <ul>
+          <li>Diffusion models are the current state-of-the-art on image, molecule, etc ...</li>
+          <li>Diffusion models need extensions to non-Euclidean spaces</li>
+      </ul>
+    </div> -->
+
+
+
+
+
+        <div id="diffusion1" class="step" data-rel-x="1800" data-rel-y="-2500"
+             data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
+             data-goto-next-list="generative summary Ov3 future">
+            <h1> Overview of (Denoising) Diffusion Models </h1>
+
+
+  <li> Denoising an image of a cat in Euclidean space</li>
+                <p style="text-align: center;">  <img src="images/ddm_cat.png"
+                    alt="cos_alpha"
+                    class="center"       style="width:1100px;height:auto;"  ></p>
+<li>2nd panel: Denoising a more complex toy distribution on SO(3) manifold</li>
+                    <p style="text-align: center;">  <img src="images/so3_checker.png"
+                        alt="cos_alpha"
+                        class="center"       style="width:1100px;height:auto;"  ></p>
+
+          <ul>
+              <li>The data  is gradually corrupted by adding noise, until it becomes almost complete noise</li>
+              <li>The goal is to learn the reverse process, so we can generate new samples from the latent space</li>
+
+          </ul>
+
+
+        </div>
+
+        <!-- <div id="diffusion2" class="step" data-rel-x="0" data-rel-y="1200"
+             data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
+             data-goto-next-list="diffusion1 summary Ov3 future">
+            <h1> (Denoising) Diffusion Models on SO(3) manifold </h1>
+
+            <p style="text-align: center;">  <img src="images/so3_2gaussians.png"
+                alt="cos_alpha"
+                class="center"       style="width:1100px;height:auto;"  ></p>
+
+                <p style="text-align: center;">  <img src="images/so3_checker.png"
+                    alt="cos_alpha"
+                    class="center"       style="width:1100px;height:auto;"  ></p>
+          <ul>
+              <li>1st panel: Denoising 2 Gaussian blobs on the sphere, color denotes the tilt</li>
+              <li>2nd panel: Denoising a more complex toy distribution with rough edges, tilt was neglected</li>
+           </ul>
+        </div> -->
+
+
+        <div id="diffusion3" class="step" data-rel-x="0" data-rel-y="1200"
+             data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
+             data-goto-next-list="diffusion2 summary Ov3 future">
+            <h1> (Denoising) Diffusion Models on SO(3) manifold: Results </h1>
+
+            <p style="text-align: center;">  <img src="images/so3_panels.png"
+                alt="cos_alpha"
+                class="center"       style="width:600px;height:auto;"  ></p>
+
+
+          <ul>
+              <li>Our model beats the competion both visually(qualitatively) and in metrics(quantitatively)</li>
+
+          </ul>
+        </div>
+
+        <div id="diffusion4" class="step" data-rel-x="0" data-rel-y="1200"
+             data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
+             data-goto-next-list="diffusion3 summary Ov3 future">
+            <h1> (Denoising) Diffusion Models on SO(3) manifold: Astro/Cosmo Application </h1>
+
+            <p style="text-align: center;">  <img src="images/sgm_2panels.png"
+                alt="cos_alpha"
+                class="center"       style="width:900px;height:auto;"  ></p>
+
+
+          <ul>
+              <li>The model learns the correct orientation conditioned on tidal fields</li>
+              <li>Each color depicts the different axis of the ellipsoid</li>
+              <li>Good agreement with the reference simulation</li>
+          </ul>
+        </div>
+
+
+
+
+<!--
+    <div id="summary" class="step" data-rel-x="2000" data-y="2000"
+         data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
+         data-goto-next-list="icecream-con crisps-pro icecream applepie">
+         <h1>Summary</h1>
+
+         <ul>
+           <li>Deep Generative Model For Galaxy Orientation</li>
+
+           <!-- <div style="z-index: 2; border: 6px solid red; width: 1500px;
+           height: 300px; border-radius: 200px;
+           position: absolute; top: 350px; left: 150px;"
+                     class="substep"></div> -->
+        <!-- <li>Methods: Modeled the Cosmic Web as a set of Graphs</li>
+           <li>Methods: Graph Convolutional NNs and GANs</li>
+
+           <li>Results: The model can learn and generate 3D, 2D vectors and scalars </li>
+           <li> Results: Generated quantities are in good agreement with the simulation</li>
+             <ul>
+    </div> --> -->
+
+
+
+
+
+    <div id="future" class="step" data-rel-x="0" data-rel-y="1000"
+     data-rotate-x="-30" data-rotate-y=" 0"
+     data-goto-key-list="ArrowUp ArrowDown ArrowLeft ArrowRight"
+     data-goto-next-list="icecream-con end1 icecream applepie">
+     <h1>Our Contributions</h1>
+      <ul>
+ <li>Deep Generative Model For Galaxy Orientation</li></ul>
+
+     <ul>
+
+                   <li><a href="#step-1">1st Method:</a></li>
+                   <ul>
+                   <li><a href="#step-10"> Modeled the Cosmic Web as a set of Graphs</a></li>
+                   <li><a href="#step-10"> Novel Graph Convolutional NNs and GANs </a></li>
+                   <li><a href="#step-10"> 1st Graph based generative model in an astrophysical context (as far as we know) </a></li>
+                   </ul>
+
+                   <li><a href="#step-1">2nd Method:</a></li>
+                   <ul>
+                   <li><a href="#step-10"> Novel Diffusion model on the SO(3) manifold</a></li>
+                   <li><a href="#step-10"> Ongoing work: add graph layer, add Euclidean data </a></li>
+
+                   </ul>     </ul>
+
+
+         <li>Results: The models can learn and generate target distributions </li>
+         <li> Results: Generated quantities are in good agreement with the truth</li>
+           <ul>
+
+         <br>
+         <div   id="end1" class="substep">
+        <p    class="fly-in fly-out"  >
+         <font size="+20">  Thank you! </font>  </p></div>
+
+  <!-- <div   id="end2" class="substep">
+             <p  class="fly-in fly-out"  >
+              <font size="+20">  Any questions?  </font>  </p></div> -->
+<br>
+              <div   id="end2" class="substep">
+                         <p  class="fly-in fly-out"  >
+                          <font size="+20">  Please take a look at the full paper: https://arxiv.org/abs/2204.07077  </font>  </p></div>
+
+      </div>
+
+
+
+
+
+      <div id="overview" class="step" data-x="3000" data-y="3000" data-scale="4" style="pointer-events: none;">
+
+      </div>
+  </div>
+
+  <div id="impress-toolbar"></div>
+
+  <div class="impress-progressbar"><div></div></div>
+  <div class="impress-progress"></div>
+
+  <div id="impress-help"></div>
+
+  <script type="text/javascript" src="../../js/impress.js"></script>
+    <script type="text/javascript" src="../../extras/highlight/highlight.pack.js"></script>
+  <script type="text/javascript" src="../../extras/mermaid/mermaid.min.js"></script>
+  <script type="text/javascript" src="../../extras/markdown/markdown.js"></script>
+  <script type="text/javascript" src="../../extras/mathjax/MathJax.js?config=TeX-AMS_CHTML"></script>
+    <script type="text/javascript" src="../../src/plugins/reveald3.js"></script>
+  <script>impress().init( );</script>
+
+  <script src="../../src/plugins/reveald3.js"></script>
+
+
+
+
+  </body>
+  </html>
